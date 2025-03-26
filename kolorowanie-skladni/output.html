@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            font-family: Consolas, monospace;
+            font-size: large;
+        }
+        .if { color:rgb(255, 0, 144); }   /* Malinowy */
+        .else { color: #00a2ff; }   /* Niebieski */
+        .for { color:rgb(159, 0, 251); }   /* Fioletowy */
+        .return { color:rgb(0, 47, 255); }   /* Granatowy */
+        .func { color:rgb(255, 0, 217); }   /* Ró¿owy */
+        .var { color: #ff7700; }   /* Pomarañczowy */
+        .type { color:rgb(255, 242, 0); }      /* ¯ó³ty */
+        .number { color:rgb(115, 255, 0); }    /* Seledynowy */
+        .operator { color:rgb(145, 108, 71); }  /* Br¹zowy */
+        .comment { color:rgb(0, 188, 25); }   /* Zielony */
+        .brackets { color:rgb(255, 0, 0); }  /* Czerowny */
+        .seperators { color: #faffe8; }  /* Bia³y */
+        .logic { color:rgb(0, 238, 255); }  /* Turkusowy */
+        .comparison { color:rgb(255, 225, 0); } /* Seledynowy */
+        .print { color:rgb(0, 174, 255); } /* Niebieski */
+		.text { color:rgb(6, 194, 34); } /* Zielony */
+    </style>
+</head>
+<body>
+<pre>
+<span class="comment">//</span> <span class="comment">To</span> <span class="comment">jest</span> <span class="comment">komentarz</span> <span class="comment">liniowy</span>
+
+<span class="func">func</span> main<span class="brackets">(</span><span class="brackets">)</span> <span class="brackets">{</span>
+    <span class="var">var</span> x <span class="type">int</span> <span class="operator">=</span> <span class="number">10</span>
+    <span class="var">var</span> y <span class="type">string</span> <span class="operator">:=</span> <span class="text">"</span><span class="text">Hello</span><span class="text">,</span> <span class="text">World</span><span class="text">!</span><span class="text">"</span>
+
+    <span class="comment">/*</span> 
+        <span class="comment">To</span> <span class="comment">jest</span> 
+        <span class="comment">komentarz</span> <span class="comment">blokowy</span> 
+    <span class="comment">*/</span> 
+
+    <span class="if">if</span> x <span class="comparison">>=</span> <span class="number">10</span> <span class="logic">&&</span> y <span class="comparison">!=</span> <span class="text">"</span><span class="text">"</span> <span class="brackets">{</span>
+        <span class="print">print</span><span class="brackets">(</span><span class="text">"</span><span class="text">x</span> <span class="text">jest</span> <span class="text">wieksze</span> <span class="text">lub</span> <span class="text">rowne</span> <span class="text">10</span> <span class="text">i</span> <span class="text">y</span> <span class="text">nie</span> <span class="text">jest</span> <span class="text">pusty</span><span class="text">"</span><span class="brackets">)</span>
+    <span class="brackets">}</span> <span class="else">else</span> <span class="brackets">{</span>
+        <span class="print">print</span><span class="brackets">(</span><span class="text">"</span><span class="text">Warunek</span> <span class="text">nie</span> <span class="text">zostal</span> <span class="text">spelniony</span><span class="text">"</span><span class="brackets">)</span>
+    <span class="brackets">}</span>
+
+    <span class="for">for</span> i <span class="operator">:=</span> <span class="number">0</span><span class="seperators">;</span> i <span class="comparison"><</span> <span class="number">5</span><span class="seperators">;</span> i<span class="operator">++</span> <span class="brackets">{</span>
+        <span class="print">print</span><span class="brackets">(</span><span class="text">"</span><span class="text">Iteracja</span><span class="text">:</span><span class="text">"</span><span class="seperators">,</span> i<span class="brackets">)</span>
+    <span class="brackets">}</span>
+
+    x<span class="operator">++</span>
+    y <span class="operator">=</span> <span class="text">"</span><span class="text">Nowa</span> <span class="text">wartosc</span><span class="text">"</span>
+
+    wynik <span class="operator">:=</span> dodaj<span class="brackets">(</span>x<span class="seperators">,</span> <span class="number">5</span><span class="brackets">)</span>
+    <span class="print">print</span><span class="brackets">(</span><span class="text">"</span><span class="text">Wynik</span> <span class="text">dodawania</span><span class="text">:</span><span class="text">"</span><span class="seperators">,</span> wynik<span class="brackets">)</span>
+
+    <span class="if">if</span> x <span class="comparison">></span> <span class="number">3</span><span class="seperators">.</span><span class="number">0</span> <span class="logic">||</span> <span class="operator">!</span>isTrue <span class="brackets">{</span>
+        <span class="print">print</span><span class="brackets">(</span><span class="text">"</span><span class="text">x</span> <span class="text">jest</span> <span class="text">wieksze</span> <span class="text">od</span> <span class="text">3</span> <span class="text">lub</span> <span class="text">isTrue</span> <span class="text">jest</span> <span class="text">falszywe</span><span class="text">"</span><span class="brackets">)</span>
+    <span class="brackets">}</span>
+
+    liczby <span class="operator">:=</span> <span class="brackets">[</span><span class="brackets">]</span><span class="type">int</span><span class="brackets">{</span><span class="number">1</span><span class="seperators">,</span> <span class="number">2</span><span class="seperators">,</span> <span class="number">3</span><span class="seperators">,</span> <span class="number">4</span><span class="seperators">,</span> <span class="number">5</span><span class="brackets">}</span>
+    <span class="for">for</span> <span class="seperators">_</span><span class="seperators">,</span> liczba <span class="operator">:=</span> range liczby <span class="brackets">{</span>
+        <span class="print">print</span><span class="brackets">(</span><span class="text">"</span><span class="text">Liczba</span><span class="text">:</span><span class="text">"</span><span class="seperators">,</span> liczba<span class="brackets">)</span>
+    <span class="brackets">}</span>
+
+    mapa <span class="operator">:=</span> map<span class="brackets">[</span><span class="type">string</span><span class="brackets">]</span><span class="type">int</span><span class="brackets">{</span><span class="text">"</span><span class="text">jeden</span><span class="text">"</span><span class="operator">:</span> <span class="number">1</span><span class="seperators">,</span> <span class="text">"</span><span class="text">dwa</span><span class="text">"</span><span class="operator">:</span> <span class="number">2</span><span class="seperators">,</span> <span class="text">"</span><span class="text">trzy</span><span class="text">"</span><span class="operator">:</span> <span class="number">3</span><span class="brackets">}</span>
+    <span class="for">for</span> klucz<span class="seperators">,</span> wartosc <span class="operator">:=</span> range mapa <span class="brackets">{</span>
+        <span class="print">print</span><span class="brackets">(</span><span class="text">"</span><span class="text">Klucz</span><span class="text">:</span><span class="text">"</span><span class="seperators">,</span> klucz<span class="seperators">,</span> <span class="text">"</span><span class="text">Wartosc</span><span class="text">:</span><span class="text">"</span><span class="seperators">,</span> wartosc<span class="brackets">)</span>
+    <span class="brackets">}</span>
+
+    <span class="print">print</span><span class="brackets">(</span><span class="text">"</span><span class="text">Wywolanie</span> <span class="text">funkcji</span> <span class="text">mnoz</span><span class="text">:</span><span class="text">"</span><span class="seperators">,</span> mnoz<span class="brackets">(</span><span class="number">4</span><span class="seperators">,</span> <span class="number">5</span><span class="brackets">)</span><span class="brackets">)</span>
+    <span class="print">print</span><span class="brackets">(</span><span class="text">"</span><span class="text">Wywolanie</span> <span class="text">funkcji</span> <span class="text">dziel</span><span class="text">:</span><span class="text">"</span><span class="seperators">,</span> dziel<span class="brackets">(</span><span class="number">10</span><span class="seperators">,</span> <span class="number">2</span><span class="brackets">)</span><span class="brackets">)</span>
+
+    <span class="return">return</span>
+<span class="brackets">}</span>
+
+<span class="comment">//</span> <span class="comment">Funkcja</span> <span class="comment">dodajaca</span> <span class="comment">dwie</span> <span class="comment">liczby</span>
+<span class="func">func</span> dodaj<span class="brackets">(</span>a <span class="type">int</span><span class="seperators">,</span> b <span class="type">int</span><span class="brackets">)</span> <span class="type">int</span> <span class="brackets">{</span>
+    <span class="return">return</span> a <span class="operator">+</span> b
+<span class="brackets">}</span>
+
+<span class="comment">//</span> <span class="comment">Funkcja</span> <span class="comment">mnozaca</span> <span class="comment">dwie</span> <span class="comment">liczby</span>
+<span class="func">func</span> mnoz<span class="brackets">(</span>a <span class="type">int</span><span class="seperators">,</span> b <span class="type">int</span><span class="brackets">)</span> <span class="type">int</span> <span class="brackets">{</span>
+    <span class="return">return</span> a <span class="operator">*</span> b
+<span class="brackets">}</span>
+
+</pre>
+</body>
+</html>

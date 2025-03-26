@@ -1,0 +1,56 @@
+// To jest komentarz liniowy
+
+func main() {
+    var x int = 10
+    var y string := "Hello, World!"
+
+    /* 
+        To jest 
+        komentarz blokowy 
+    */ 
+
+    if x >= 10 && y != "" {
+        print("x jest wieksze lub rowne 10 i y nie jest pusty")
+    } else {
+        print("Warunek nie zostal spelniony")
+    }
+
+    for i := 0; i < 5; i++ {
+        print("Iteracja:", i)
+    }
+
+    x++
+    y = "Nowa wartosc"
+
+    wynik := dodaj(x, 5)
+    print("Wynik dodawania:", wynik)
+
+    if x > 3.0 || !isTrue {
+        print("x jest wieksze od 3 lub isTrue jest falszywe")
+    }
+
+    liczby := []int{1, 2, 3, 4, 5}
+    for _, liczba := range liczby {
+        print("Liczba:", liczba)
+    }
+
+    mapa := map[string]int{"jeden": 1, "dwa": 2, "trzy": 3}
+    for klucz, wartosc := range mapa {
+        print("Klucz:", klucz, "Wartosc:", wartosc)
+    }
+
+    print("Wywolanie funkcji mnoz:", mnoz(4, 5))
+    print("Wywolanie funkcji dziel:", dziel(10, 2))
+
+    return
+}
+
+// Funkcja dodajaca dwie liczby
+func dodaj(a int, b int) int {
+    return a + b
+}
+
+// Funkcja mnozaca dwie liczby
+func mnoz(a int, b int) int {
+    return a * b
+}
